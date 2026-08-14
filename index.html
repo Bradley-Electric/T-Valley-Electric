@@ -1,22 +1,362 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="T Valley Electric provides reliable residential, commercial, service, new construction, and communication wiring in Minot, North Dakota and the surrounding area.">
-  <title>T Valley Electric | Minot, ND</title>
-  <style>
-    :root{--ink:#07121e;--panel:#0c1b2b;--line:#274057;--gold:#f5b51b;--paper:#f6f7f8;--muted:#afbecd}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--ink);color:#fff;line-height:1.5}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}header{position:sticky;top:0;z-index:3;background:rgba(7,18,30,.96);border-bottom:1px solid #1d3449}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{color:#fff;text-decoration:none;font-size:18px;line-height:1;font-weight:900;letter-spacing:.08em}.brand span{display:block;color:var(--gold);font-size:10px;margin-top:6px;letter-spacing:.16em}.navlinks{display:flex;gap:22px;align-items:center}.navlinks a{color:#dce7ef;text-decoration:none;font-size:14px}.button{display:inline-block;background:var(--gold);color:#111b23;text-decoration:none;font-weight:800;border-radius:4px;padding:14px 20px}.hero{min-height:650px;display:grid;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 25%,#29435e 0,transparent 28%),linear-gradient(120deg,#07121e 30%,#0d2438)}.hero:before{content:"";position:absolute;inset:0;opacity:.18;background-image:linear-gradient(#8da0b2 1px,transparent 1px),linear-gradient(90deg,#8da0b2 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(90deg,#000,transparent)}.hero .wrap{position:relative;padding:90px 0}.eyebrow{font-size:12px;letter-spacing:.15em;font-weight:800;color:var(--gold);margin:0 0 17px}.hero h1{font-size:clamp(44px,7vw,82px);line-height:.98;letter-spacing:-.055em;max-width:770px;margin:0}.hero p{max-width:560px;color:#d7e1e9;font-size:18px;margin:26px 0 30px}.actions{display:flex;gap:13px;flex-wrap:wrap}.outline{display:inline-block;padding:13px 19px;border:1px solid #aebdcc;border-radius:4px;color:#fff;text-decoration:none;font-weight:800}.section{padding:90px 0}.light{color:#122231;background:var(--paper)}.label{color:var(--gold);font-weight:900;letter-spacing:.12em;font-size:12px;margin:0 0 10px}.light .label{color:#a76d00}.section h2{font-size:clamp(32px,5vw,52px);letter-spacing:-.04em;line-height:1.03;margin:0 0 18px}.intro{max-width:610px;color:#506274;font-size:17px}.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:42px}.card{padding:25px 20px;min-height:190px;border:1px solid #d7dce1;background:#fff}.card b{font-size:18px;display:block;margin-bottom:12px}.card p{color:#556779;font-size:14px;margin:0}.num{color:#b67c09;font-size:12px;font-weight:bold;letter-spacing:.12em}.service-area{background:var(--panel);padding:70px 0}.split{display:grid;grid-template-columns:1.2fr .8fr;gap:55px;align-items:center}.split p{color:var(--muted);font-size:17px}.radius{border:1px solid var(--line);padding:34px;text-align:center}.radius strong{display:block;font-size:72px;color:var(--gold);line-height:1}.radius span{color:#d4e0ea;font-weight:bold}.contact{background:#f5b51b;color:#11202c}.contact .label{color:#624300}.contact h2{max-width:600px}.contactgrid{display:flex;justify-content:space-between;align-items:end;gap:20px}.phone{color:#11202c;font-weight:900;font-size:clamp(29px,4vw,48px);text-decoration:none;letter-spacing:-.04em}.note{font-size:14px;max-width:410px}footer{padding:32px 0;color:#8fa2b4;font-size:13px}footer .wrap{display:flex;justify-content:space-between;gap:18px}@media(max-width:760px){.navlinks{display:none}.hero{min-height:620px}.hero .wrap{padding:70px 0}.cards{grid-template-columns:1fr 1fr}.card{min-height:150px}.split{grid-template-columns:1fr;gap:30px}.contactgrid{display:block}.phone{display:block;margin:22px 0}.section{padding:70px 0}}@media(max-width:440px){.wrap{width:min(100% - 30px,1120px)}.cards{grid-template-columns:1fr}.button,.outline{width:100%;text-align:center}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="T Valley Electric — licensed electrical contractor serving Minot, ND and surrounding areas within 60 miles.">
+<title>T Valley Electric | Minot, ND</title>
+<style>
+:root{
+  --bg:#080d17;
+  --panel:#101827;
+  --panel2:#0c1320;
+  --grid:#1b2a42;
+  --text:#f5f2ea;
+  --body:#c5ccd8;
+  --muted:#8da1bc;
+  --amber:#f0aa2b;
+  --amber2:#ffbd3d;
+  --border:#263752;
+  --max:1160px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.55;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(var(--max),calc(100% - 48px));margin:auto}
+.grid-bg{
+  background-color:var(--bg);
+  background-image:
+    linear-gradient(rgba(27,42,66,.72) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(27,42,66,.72) 1px,transparent 1px);
+  background-size:83px 83px;
+}
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(7,12,21,.96);
+  border-bottom:1px solid var(--border);
+}
+.nav{height:94px;display:flex;align-items:center;gap:28px}
+.logo{display:flex;align-items:center;gap:13px;min-width:260px}
+.bolt{font-size:38px;color:var(--amber);line-height:1;text-shadow:0 0 18px rgba(240,170,43,.2)}
+.logo-name{font-size:21px;line-height:1.12;letter-spacing:.01em}
+.phone{margin-left:auto;font-family:monospace;font-weight:800;font-size:20px;letter-spacing:.06em}
+.phone:before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--amber);margin-right:13px;box-shadow:0 0 12px rgba(240,170,43,.5)}
+.call{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--amber);color:#0b1018;font-weight:900;
+  padding:16px 28px;border-radius:4px;font-size:16px;
+}
+.call:hover{background:var(--amber2)}
+.hero{padding:150px 0 120px}
+.eyebrow{
+  color:var(--amber);font-family:monospace;font-size:16px;
+  letter-spacing:.16em;text-transform:uppercase;display:flex;
+  align-items:center;gap:18px;margin-bottom:44px;
+}
+.eyebrow:before{content:"";width:50px;height:2px;background:var(--amber)}
+h1{
+  font-size:clamp(48px,7vw,78px);line-height:1.02;
+  letter-spacing:-.045em;max-width:900px;margin:0 0 38px;
+}
+h1 .accent{color:var(--amber)}
+.hero-copy{font-size:21px;color:var(--body);max-width:850px;margin:0 0 44px}
+.actions{display:flex;gap:18px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:60px;padding:0 30px;border-radius:4px;font-weight:900;font-size:17px;
+}
+.btn-primary{background:var(--amber);color:#0b1018}
+.btn-secondary{border:2px solid var(--border);color:var(--text)}
+.btn-secondary:hover{border-color:var(--amber);color:var(--amber)}
+.service-note{display:flex;align-items:center;gap:18px;margin-top:54px;color:var(--muted);font-family:monospace;font-size:16px}
+.radius{
+  width:64px;height:64px;border:2px solid var(--amber);border-radius:50%;
+  display:grid;place-items:center;color:var(--amber);font-weight:900;line-height:1.05;
+  text-align:center;
+}
+section{border-top:1px solid var(--border)}
+.services{padding:100px 0 120px}
+.kicker{
+  color:var(--muted);font-family:monospace;letter-spacing:.18em;
+  font-size:16px;text-transform:uppercase;margin-bottom:10px
+}
+h2{font-size:44px;line-height:1.08;letter-spacing:-.035em;margin:0 0 42px}
+.service-panel{
+  border:2px solid var(--border);background:rgba(13,20,33,.7);
+}
+.service-card{
+  padding:38px 46px;border-bottom:2px solid var(--border);
+  position:relative;min-height:220px;
+}
+.service-card:last-child{border-bottom:0}
+.service-num{font-family:monospace;color:var(--muted);font-size:16px;letter-spacing:.08em;margin-bottom:30px}
+.service-card h3{font-size:30px;margin:0 0 18px}
+.service-card ul{margin:0;padding:0;list-style:none}
+.service-card li{font-size:18px;color:var(--body);padding:4px 0}
+.service-card li:before{content:"—";color:var(--muted);margin-right:13px}
+.service-icon{
+  position:absolute;right:42px;top:35px;width:38px;height:48px;
+  border:2px solid var(--amber);border-radius:4px;
+}
+.service-icon:after{
+  content:"";position:absolute;left:7px;top:7px;width:22px;height:27px;
+  background:var(--amber);
+}
+.why{padding:110px 0}
+.why-panel{border:2px solid var(--border);background:rgba(9,14,24,.5)}
+.why-card{padding:45px 48px;border-bottom:2px solid var(--border)}
+.why-card:last-child{border-bottom:0}
+.why-card h3{
+  color:var(--amber);font-family:monospace;font-size:17px;
+  letter-spacing:.14em;font-weight:500;margin:0 0 22px
+}
+.why-card p{margin:0;color:var(--body);font-size:21px;max-width:940px}
+.contact{padding:105px 0 80px}
+.contact-layout{display:grid;grid-template-columns:1fr 1.05fr;gap:52px;align-items:start}
+.contact-copy h2{font-size:48px;margin-bottom:20px}
+.contact-copy p{font-size:20px;color:var(--body);max-width:560px}
+.contact-card{border:2px solid var(--border);background:var(--panel);padding:50px 48px}
+.contact-card h3{font-size:36px;margin:0 0 22px}
+.contact-card>p{font-size:20px;color:var(--body);margin:0 0 38px}
+.contact-row{
+  display:grid;grid-template-columns:180px 1fr;gap:25px;
+  padding:20px 0;border-top:1px solid var(--border)
+}
+.label{font-family:monospace;color:var(--muted);font-size:15px;letter-spacing:.1em}
+.value{font-size:20px;font-weight:800}
+.radius-box{
+  margin-top:28px;padding:34px 44px;border:2px solid var(--border);
+  background-image:linear-gradient(rgba(27,42,66,.72) 1px,transparent 1px),linear-gradient(90deg,rgba(27,42,66,.72) 1px,transparent 1px);
+  background-size:60px 60px
+}
+.radius-label{font-family:monospace;color:var(--muted);letter-spacing:.12em}
+.radius-number{font-size:76px;line-height:1;color:var(--amber);margin:10px 0}
+.radius-sub{font-size:18px;color:var(--body)}
+footer{padding:48px 0 70px;color:var(--muted);font-family:monospace;font-size:16px}
+.footer-line{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.mobile-call{display:none}
+@media(max-width:800px){
+ .container{width:min(var(--max),calc(100% - 34px))}
+ .nav{height:78px;gap:12px}
+ .logo{min-width:0;flex:1}
+ .logo-name{font-size:17px}
+ .bolt{font-size:32px}
+ .phone{font-size:16px;margin-left:0}
+ .call{padding:13px 18px;font-size:15px}
+ .hero{padding:105px 0 90px}
+ .eyebrow{font-size:14px;margin-bottom:35px}
+ h1{font-size:51px}
+ .hero-copy{font-size:18px}
+ .service-card{padding:34px 28px}
+ .service-icon{right:24px}
+ .why-card{padding:35px 28px}
+ .contact-layout{grid-template-columns:1fr}
+ .contact-card{padding:36px 28px}
+ .contact-row{grid-template-columns:115px 1fr}
+}
+@media(max-width:560px){
+ .phone{display:none}
+ .call{margin-left:auto}
+ .hero{padding:78px 0 75px}
+ .grid-bg{background-size:83px 83px}
+ h1{font-size:46px}
+ .hero-copy{font-size:17px;line-height:1.65}
+ .actions{display:grid}
+ .btn{width:100%}
+ .service-note{font-size:14px}
+ .services,.why,.contact{padding:72px 0}
+ h2,.contact-copy h2{font-size:38px}
+ .service-card h3{font-size:26px}
+ .service-card li{font-size:17px}
+ .why-card p{font-size:18px}
+ .contact-card h3{font-size:30px}
+ .contact-card>p{font-size:18px}
+ .contact-row{grid-template-columns:1fr;gap:6px}
+ .radius-number{font-size:60px}
+}
+
+.gallery{padding:100px 0 110px;background:#0b111d}
+.gallery-intro{max-width:760px;margin-bottom:38px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery-slot{min-height:260px;border:2px dashed #31425f;background:#0e1726;display:flex;align-items:center;justify-content:center;text-align:center;padding:28px;color:#8da1bc}
+.gallery-slot span{font-family:monospace;letter-spacing:.08em;text-transform:uppercase;font-size:14px}
+.gallery-slot strong{display:block;color:#f0aa2b;font-size:18px;margin-bottom:8px}
+@media(max-width:800px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.gallery-grid{grid-template-columns:1fr}.gallery-slot{min-height:220px}}
+
+</style>
 </head>
 <body>
-  <header><div class="wrap nav"><a class="brand" href="#top">T VALLEY ELECTRIC<span>MINOT, NORTH DAKOTA</span></a><nav class="navlinks"><a href="#services">Services</a><a href="#area">Service Area</a><a class="button" href="tel:+17018338857">Call (701) 833-8857</a></nav></div></header>
-  <main id="top">
-    <section class="hero"><div class="wrap"><p class="eyebrow">LICENSED &amp; INSURED ELECTRICAL CONTRACTOR · MINOT, ND</p><h1>Electrical work<br>done right.</h1><p>Residential, commercial, service calls, new construction, and communication wiring—done with care and built to last.</p><div class="actions"><a class="button" href="tel:+17018338857">Call (701) 833-8857</a><a class="outline" href="#contact">Request a quote</a></div></div></section>
-    <section id="services" class="section light"><div class="wrap"><p class="label">WHAT WE DO</p><h2>Reliable electrical work for the jobs that matter.</h2><p class="intro">From repairs and upgrades to complete new builds, T Valley Electric provides straightforward, dependable service throughout the Minot area.</p><div class="cards"><article class="card"><p class="num">01</p><b>Residential Electrical</b><p>Repairs, upgrades, remodels, and dependable work for your home.</p></article><article class="card"><p class="num">02</p><b>Commercial Electrical</b><p>Professional electrical work to keep your business operating safely.</p></article><article class="card"><p class="num">03</p><b>Service Calls</b><p>Clear answers and prompt help when an electrical issue needs attention.</p></article><article class="card"><p class="num">04</p><b>New Construction</b><p>Electrical planning and installation for new homes and commercial projects.</p></article><article class="card"><p class="num">05</p><b>Communication Wiring</b><p>Communication cabling and wiring for new construction and additions.</p></article></div></div></section>
-    <section id="area" class="service-area"><div class="wrap split"><div><p class="label">LOCAL SERVICE</p><h2>Serving Minot and the surrounding area.</h2><p>T Valley Electric is based in Minot, North Dakota and serves customers within approximately 60 miles. Call to discuss your job and schedule service.</p></div><div class="radius"><strong>60</strong><span>MILE SERVICE AREA</span></div></div></section>
-    <section id="contact" class="section contact"><div class="wrap contactgrid"><div><p class="label">LET'S TALK</p><h2>Have an electrical project? Give us a call.</h2><p class="note">For service, a quote, or to discuss your next project, call T Valley Electric today.</p></div><a class="phone" href="tel:+17018338857">(701) 833-8857</a></div></section>
-  </main>
-  <footer><div class="wrap"><span>© 2026 T Valley Electric</span><span>Licensed &amp; Insured · Minot, ND</span></div></footer>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#top">
+      <span class="bolt">⚡</span>
+      <span class="logo-name">T VALLEY<br>ELECTRIC</span>
+    </a>
+    <a class="phone" href="tel:+17018338857">(701) 833-8857</a>
+    <a class="call" href="tel:+17018338857">Call now</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero grid-bg">
+  <div class="container">
+    <div class="eyebrow">Licensed &amp; Insured Electrical Contractor · Minot, ND</div>
+    <h1>Electrical work <span class="accent">done right.</span></h1>
+    <p class="hero-copy">Residential, commercial, service calls, and new construction — straightforward electrical work from a contractor who answers the phone.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="tel:+17018338857">Call (701) 833-8857</a>
+      <a class="btn btn-secondary" href="mailto:bherrtvalley@yahoo.com?subject=Electrical%20Quote%20Request">Email for a quote</a>
+    </div>
+    <div class="service-note">
+      <span class="radius">60<br>mi</span>
+      <span>Serving Minot, ND and the surrounding area<br>within 60 miles</span>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    <div class="kicker">Service Panel</div>
+    <h2>What we work on</h2>
+    <div class="service-panel">
+      <article class="service-card">
+        <div class="service-num">01 · RESIDENTIAL</div>
+        <div class="service-icon"></div>
+        <h3>Residential Electrical</h3>
+        <ul>
+          <li>Wiring & rewiring</li>
+          <li>Panel upgrades</li>
+          <li>Lighting installation</li>
+          <li>Troubleshooting & repairs</li>
+        </ul>
+      </article>
+      <article class="service-card">
+        <div class="service-num">02 · COMMERCIAL</div>
+        <div class="service-icon"></div>
+        <h3>Commercial Electrical</h3>
+        <ul>
+          <li>Tenant build-outs</li>
+          <li>Service upgrades</li>
+          <li>Maintenance contracts</li>
+        </ul>
+      </article>
+      <article class="service-card">
+        <div class="service-num">03 · SERVICE CALLS</div>
+        <div class="service-icon"></div>
+        <h3>Service Calls</h3>
+        <ul>
+          <li>Breaker issues</li>
+          <li>Power outages</li>
+          <li>Electrical diagnostics</li>
+        </ul>
+      </article>
+      <article class="service-card">
+        <div class="service-num">04 · NEW BUILD</div>
+        <div class="service-icon"></div>
+        <h3>New Construction</h3>
+        <ul>
+          <li>Full electrical planning & install</li>
+          <li>Code-compliant systems</li>
+        </ul>
+      </article>
+      <article class="service-card">
+        <div class="service-num">05 · COMMUNICATIONS</div>
+        <div class="service-icon"></div>
+        <h3>Communication Wiring</h3>
+        <ul>
+          <li>Communication wiring</li>
+          <li>Low-voltage wiring</li>
+          <li>New construction communication runs</li>
+          <li>Communication additions & troubleshooting</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container">
+    <div class="kicker">Why T Valley</div>
+    <h2>Built on reliability</h2>
+    <div class="why-panel">
+      <article class="why-card">
+        <h3>LOCAL</h3>
+        <p>Based in Minot and rooted in the Souris Valley — we know the area, the codes, and the buildings.</p>
+      </article>
+      <article class="why-card">
+        <h3>RESPONSIVE</h3>
+        <p>Straightforward scheduling and a real person on the phone for quotes, service calls, and emergencies.</p>
+      </article>
+      <article class="why-card">
+        <h3>THOROUGH</h3>
+        <p>From a single breaker fix to full new-construction wiring, every job is left code-compliant and clean.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="gallery">
+  <div class="container">
+    <div class="gallery-intro">
+      <div class="kicker">Our Work</div>
+      <h2>Recent projects</h2>
+      <p class="hero-copy" style="font-size:18px;margin:0;color:#c5ccd8">A look at the work behind T Valley Electric. Project photos can be added here as jobs are completed.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-slot"><span><strong>Project Photo</strong>Add a completed-job photo here</span></div>
+      <div class="gallery-slot"><span><strong>Project Photo</strong>Add a completed-job photo here</span></div>
+      <div class="gallery-slot"><span><strong>Project Photo</strong>Add a completed-job photo here</span></div>
+      <div class="gallery-slot"><span><strong>Project Photo</strong>Add a completed-job photo here</span></div>
+      <div class="gallery-slot"><span><strong>Project Photo</strong>Add a completed-job photo here</span></div>
+      <div class="gallery-slot"><span><strong>Project Photo</strong>Add a completed-job photo here</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container contact-layout">
+    <div class="contact-copy">
+      <div class="kicker">Get in touch</div>
+      <h2>Let's talk about the job</h2>
+    </div>
+    <div class="contact-card">
+      <h3>Contact T Valley Electric</h3>
+      <p>Call, text, or email — whichever's easiest. We'll get back to you promptly to talk through the work and get you scheduled.</p>
+      <div class="contact-row">
+        <span class="label">PHONE</span>
+        <a class="value" href="tel:+17018338857">(701) 833-8857</a>
+      </div>
+      <div class="contact-row">
+        <span class="label">EMAIL</span>
+        <a class="value" href="mailto:bherrtvalley@yahoo.com">bherrtvalley@yahoo.com</a>
+      </div>
+      <div class="contact-row">
+        <span class="label">AREA</span>
+        <span class="value">Minot, ND & within 60 miles</span>
+      </div>
+      <div class="radius-box">
+        <div class="radius-label">SERVICE RADIUS</div>
+        <div class="radius-number">60 mi</div>
+        <div class="radius-sub">from Minot, North Dakota</div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-line">
+    <span>© 2026 T Valley Electric</span>
+    <span>Minot, ND · Residential & Commercial</span>
+  </div>
+</footer>
 </body>
 </html>
